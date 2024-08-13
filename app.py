@@ -30,6 +30,3 @@ st.plotly_chart(fig_hist2)
 fig_scatter = px.scatter(filtered_cars, x='model_year', y='odometer', color='model', title='Odometer of vehicles')
 st.plotly_chart(fig_scatter)
 
-# Add a checkbox to show scatter plot
-if st.checkbox('Show Scatter Plot'):
-    st.plotly_chart(fig_scatter)
