@@ -21,6 +21,12 @@ st.plotly_chart(fig_hist2)
 fig_scatter = px.scatter(cars, x='model_year', y='odometer', color='model', title='Odometer of vehicles')
 st.plotly_chart(fig_scatter)
 
-#add checkbox to show display
+#add slider to show display
+ # Add a checkbox to show scatter plot
 if st.checkbox('Show Scatter Plot'):
     st.plotly_chart(fig_scatter)
+filter_cars = st.checkbox('Show only Ford F150')
+if filter_cars:
+    filtered_cars = cars[cars['model'] == 'ford f150']
+else:
+    filtered_cars = cars
