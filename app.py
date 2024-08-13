@@ -13,8 +13,7 @@ st.header ('Car Data Analysis')
 filter_cars = st.checkbox('Show only SUVs')
 
  # Add a checkbox to filter data
-if st.checkbox('Show Scatter Plot'):
-    st.plotly_chart(fig_scatter)
+
 filter_cars = st.checkbox('Show only SUVs')
 if filter_cars:
     filtered_cars = cars[cars['type'] == 'SUV']
